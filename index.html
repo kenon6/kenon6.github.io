@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <style> 
+    #grad {
+    background: #6B8E23; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#6B8E23, #A2CD5A); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#6B8E23, #A2CD5A); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#6B8E23,#A2CD5A); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#6B8E23, #A2CD5A); /* Standard syntax */
+}
+
+body {
+	cursor: url("http://media.tumblr.com/tumblr_lqs4osv61Z1qfoi4t.png"), default;
+}
+
+#toptitle {
+	color: firebrick;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 70px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 50px;
+}
+
+#tophead {
+	color: firebrick;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 70px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 200px;
+}
+
+#aboutme {
+	color: firebrick;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 200px;
+}
+
+#scratchHead {
+	color: firebrick;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 30px;
+	/*padding-top: 500px;*/
+	padding-top: 30px;
+}
+
+#scratch {
+	color: firebrick;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 50px;
+}
+
+#pythonHead {
+	color: firebrick;
+	text-align: center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 30px;
+	/*padding-top: 500px;*/
+	padding-top: 30px;
+}
+
+#python {
+	color: firebrick;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	padding-top: 50px;
+}
+
+a:link {
+	color:#faebd7;
+	text-decoration: none;
+}
+
+a:visited {
+	color:#faebd7;
+	text-decoration: none;
+}
+
+a:hover {
+	color:none;
+	text-decoration: none;
+}
+
+a:active {
+	color:none;
+	text-decoration: none;
+}
+
+
+
+#hidden {
+	color:transparent;
+}
+
+.button {
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	width: auto;
+	border: 2px;
+	border-style: solid;
+	border-color: firebrick;
+	padding: 10px;
+	color: firebrick;
+	background: transparent;
+}
+
+/*.container {
+	padding: 20px;
+}
+.sliderWrap {
+	overflow: hidden;
+	position: relative;
+	top: auto;
+}
+#imageSlider {
+	position: relative;
+	height: auto;
+	list-style: none;
+	overflow: hidden;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+}
+#imageSlider li {
+	position: relative;
+	float: left;
+}
+.navi {
+	position: absolute;
+	top: 120px;
+	height: 50px;
+	width: 30px;
+	opacity: 0.6;
+}
+.navi:hover {
+	opacity: 0.9;
+}
+#prev {
+	background: #000;
+	url("obama1.jpg") no-repeat center;
+	right: 0px;
+}
+#next {
+	background: #000;
+	url("obama2.jpg") no-repeat center;
+	right: 0px;
+}*/
+	</style>
+    <script>
+    window.onload = setTimeout(function() { alert("Here to learn more about Fictional Feminists?"); },1000);
+
+function hoverBigger() {
+	var hovered = document.getElementById("hovering");
+	hovered.width = 576;
+	hovered.height = 324;
+}
+
+function hoverNorm() {
+	var hoverBye = document.getElementById("hovering");
+	hoverBye.width = 192;
+	hoverBye.height = 108;
+}
+
+function moreabout() {
+	var aboutmethings = document.getElementById("aboutme");
+	aboutmethings.innerHTML = "I'm a widow. And no I didn't kill my husband. I never left him or anything. I wanted to create Fictional Feminists to have a cause to rally behind."
+}
+
+window.smoothScrollTo = (function () {
+  var timer, start, factor;
+  
+  return function (target, duration) {
+    var offset = window.pageYOffset,
+        delta  = target - window.pageYOffset; // Y-offset difference
+    duration = duration || 1000;              // default 1 sec animation
+    start = Date.now();                       // get start time
+    factor = 0;
+    
+    if( timer ) {
+      clearInterval(timer); // stop any running animations
+    }
+    
+    function step() {
+      var y;
+      factor = (Date.now() - start) / duration; // get interpolation factor
+      if( factor >= 1 ) {
+        clearInterval(timer); // stop animation
+        factor = 1;           // clip to max 1.0
+      } 
+      y = factor * delta + offset;
+      window.scrollBy(0, y - window.pageYOffset);
+    }
+    
+    timer = setInterval(step, 10);
+    return timer;
+  }
+}())
+
+// window.smoothScroll = function(target) {
+// 	var scrollContainer = target;
+// 	do {
+// 		scrollContainer = scrollContainer.parentNode;
+// 		if (!scrollContainer) return;
+// 		scrollContainer.scrollTop += 1;
+// 	}
+// 	while (scrollContainer.scrollTop == 0);;
+
+// 	var targetY = 0;
+// 	do {
+// 		if (target == scrollContainer) break;
+// 		targetY += target.offsetTop;
+// 	}
+// 	while (target = target.offsetParent);
+
+// 	scroll = function(c,a,b,i) {
+// 		i++, if (i > 30) return;
+// 		c.scrollTop = a + (b-a) / 30 * i;
+// 		setTimeOut(function(){scroll(c,a,b,i);}, 20);
+// 	}
+// 	scroll(scrollContainer,scrollContainer.scrollTop, targetY, 0)
+// }// JavaScript Document
+	</script>
+	<link rel="stylesheet" type="text/css" href="../nkenon.github.io/styling.css">
+	<link href="../nkenon.github.io/CSS-WEB1.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../nkenon.github.io/scripting.js"></script>
+	<title> Rose's Page</title>
+
+</head>
+
+<body id="grad">
+
+	<div id="tophead">Rose</div>
+
+	<br>
+	<br>
+
+	<!-- <center><div class="button"><a href="#hidden">Who is she?</a></div></center> -->
+	<center><input class="button" type="button" value="Who am I?" onclick="smoothScrollTo(document.getElementById('hidden').offsetTop)"></center>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="hidden">hi</div>
+	<br>
+	<br>
+	<br>
+
+	<div id="aboutme" onmousedown="moreabout()">A little more about me. Click here.</div>
+
+	<br>
+
+	<!-- <center><div class="button"><a href="#scratching">See some projects</a></div></center> -->
+	
+
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="scratchHead"><a name="scratching"></a></div>
+	<div id="scratch">
+		<ul>
+			<center><a href="Rose.jpg"><img id="hovering" src="Rose.jpg" title="Rose" alt="A picture of my ex husband's house!" height="300" width="300"> </a></center>
+			<br>
+			
+			<center><a>I truly loved my late husband. He gave me a lot to be thankful for. He was kind when he wanted to be, funny most of the time and he was rarely angry. Despite that, he never put my needs over his. I helped him get through life, putting my own dreams on the bench and he decided to see another woman. Now I'm not like Medea. Although I felt like killing him, I didn't. I also didn't have the guts to leave my son with him like Nora did. So I stuck with him and put up with it till he died. Why did I feel the need to put myself second in the relationship? I have no idea. I believe with Fictional Feminists, we can prevent women from feeling that way. We are here to empower!  </a></center>
+<br>
+<br>
+<br>
+	<!-- <center><div class="button"><a href="#top">Go back to top</a></div></center> -->
+	<center><input class="button" type="button" value="Go back to top" onclick="smoothScrollTo(document.getElementById('tophead').offsetTop)"></center>
+
+ 	<br>
+	<br>
+	<br>
+
+</body>
+
+</html>
+
